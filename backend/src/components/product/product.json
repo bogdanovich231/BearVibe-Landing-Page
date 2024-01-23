@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_product_products",
+  "info": {
+    "displayName": "Product",
+    "icon": "cup",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "categorie": {
+      "type": "enumeration",
+      "enum": [
+        "All",
+        "Coffee",
+        "Pancakes",
+        "Sets",
+        "Bakery"
+      ]
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
