@@ -1,0 +1,41 @@
+.product {
+    border-radius: 15px;
+    border: 1px solid #000;
+
+    width: 300px;
+
+    &_image {
+        img {
+            width: 100%;
+        }
+    }
+
+    &_information {
+        margin: 17px 10px;
+    }
+
+    &_description {
+        p {
+            font-size: 15px;
+            color: #000;
+        }
+    }
+
+    &_title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 9px;
+
+        h4 {
+            color: #E923A4;
+        }
+
+        p {
+            font-size: 20px;
+            color: #000;
+        }
+    }
+
+
+}

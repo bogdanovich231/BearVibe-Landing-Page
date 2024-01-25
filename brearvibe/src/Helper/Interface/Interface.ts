@@ -19,16 +19,43 @@ export interface IAbout {
   ];
 }
 
-export interface IProduct {
-  data: {
-    attributes: {
-      product: {
-        name: string;
-        description: string;
-        image: string;
-        price: number;
-        categorie: string;
+export interface IContact {
+  data: [
+    {
+      id: number;
+      attributes: {
+        email: string;
+        phone: number;
+        address: string;
+        image: {
+          data: [
+            {
+              attributes: {
+                url: string;
+              };
+            },
+          ];
+        };
       };
+    },
+  ];
+}
+
+export interface IProduct {
+  id: number;
+  attributes: {
+    name: string;
+    description: string;
+    price: number;
+    categorie: string;
+    image: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      }[];
     };
   };
 }
+
+
