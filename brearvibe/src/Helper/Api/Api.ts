@@ -4,13 +4,15 @@ const API_URL = 'http://localhost:1337/api/';
 
 export const api = createApi({
   reducerPath: 'api',
-  tagTypes: ['about'],
-  baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
+  baseQuery: fetchBaseQuery({ baseUrl: API_URL, }),
   endpoints: (builder) => ({
     getAbout: builder.query({
       query: () => 'abouts?populate=*',
     }),
+    getContact: builder.query({
+      query: () => 'contacts?populate=*',
+    }),
   }),
 });
 
-export const useGetAboutQuery = api;
+export const { useGetAboutQuery, useGetContactQuery } = api;

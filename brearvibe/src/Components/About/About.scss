@@ -1,9 +1,9 @@
 .about {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 60px;
-    margin: 100px 40px;
+    gap: 62px;
+    margin: 70px 0px;
 
     &_image {
         img {
@@ -12,6 +12,19 @@
     }
 
     &_information {
-        max-width: 50%;
+        max-width: 28%;
+
+        &_description {
+
+            &_break_word {
+                white-space: pre-line;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+
+        h2 {
+            margin-bottom: 16px;
+        }
     }
 }

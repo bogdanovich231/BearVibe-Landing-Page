@@ -25,7 +25,9 @@ function About() {
       </div>
       <div className="about_information">
         <h2>{aboutData.data[0].attributes.title}</h2>
-        <p>{aboutData.data[0].attributes.description}</p>
+        <div className="about_information_description">
+          <p className='about_information_description_break_word'>{aboutData.data[0].attributes.description}</p>
+        </div>
       </div>
     </div>
   );

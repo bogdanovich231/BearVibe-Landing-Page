@@ -1,0 +1,21 @@
+.slider {
+    &_title {
+        text-align: center;
+
+        h2 {
+            margin-bottom: 17px;
+        }
+    }
+
+    &_button {
+        text-align: center;
+
+    }
+
+    &_products {
+        display: flex;
+        gap: 70px;
+        justify-content: center;
+        margin: 50px 50px;
+    }
+}
