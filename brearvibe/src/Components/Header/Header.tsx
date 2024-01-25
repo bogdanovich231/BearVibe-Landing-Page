@@ -51,7 +51,7 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to="/contact" onClick={closeMenu}>
+            <Link to="coworking-space" onClick={closeMenu}>
               Coworking
             </Link>
           </li>

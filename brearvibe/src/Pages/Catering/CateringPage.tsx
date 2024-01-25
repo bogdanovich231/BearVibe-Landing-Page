@@ -29,7 +29,7 @@ function CateringPage() {
             <div className="catering_information">
                 <h2>{cateringData.data[0].attributes.title}</h2>
                 <div className="catering_information_description">
-                    <p className='catering_information_description_break_word'>{cateringData.data[0].attributes.description}</p>
+                    <p>{cateringData.data[0].attributes.description}</p>
                 </div>
                 <div className="contacts_button">
                     <Link to={'contact-forms'} className="button">

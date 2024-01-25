@@ -15,7 +15,10 @@ export const api = createApi({
     getCatering: builder.query({
       query: () => 'caterings?populate=*',
     }),
+    getCoworking: builder.query({
+      query: () => 'coworkings?populate=*',
+    }),
   }),
 });
 
-export const { useGetAboutQuery, useGetContactQuery, useGetCateringQuery } = api;
+export const { useGetAboutQuery, useGetContactQuery, useGetCateringQuery, useGetCoworkingQuery } = api;

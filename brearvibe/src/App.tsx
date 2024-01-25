@@ -8,6 +8,8 @@ import ErrorPage from './Components/404/ErrorPage';
 import ContactPage from './Pages/Contact/ContactPage';
 import Contact from './Components/Contact/Contact';
 import About from './Components/About/About';
+import CateringPage from './Pages/Catering/CateringPage';
+import CoworkingPage from './Pages/Coworking/CoworkingPage';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="contact-forms" element={<ContactPage />} />
           <Route path="about" element={<About />} />
           <Route path="menu" element={<Menu />} />
+          <Route path="catering" element={<CateringPage />} />
+          <Route path="coworking-space" element={<CoworkingPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
         <Footer />
