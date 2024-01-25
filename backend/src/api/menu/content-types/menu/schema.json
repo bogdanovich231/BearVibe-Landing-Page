@@ -17,12 +17,6 @@
     },
     "description": {
       "type": "string"
-    },
-    "product": {
-      "displayName": "Product",
-      "type": "component",
-      "repeatable": true,
-      "component": "product.product"
     }
   }
 }

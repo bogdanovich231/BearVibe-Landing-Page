@@ -1,11 +1,16 @@
 {
-  "collectionName": "components_product_products",
+  "kind": "collectionType",
+  "collectionName": "products",
   "info": {
+    "singularName": "product",
+    "pluralName": "products",
     "displayName": "Product",
-    "icon": "cup",
     "description": ""
   },
-  "options": {},
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string"
