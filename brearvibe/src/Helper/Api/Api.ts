@@ -12,7 +12,10 @@ export const api = createApi({
     getContact: builder.query({
       query: () => 'contacts?populate=*',
     }),
+    getCatering: builder.query({
+      query: () => 'caterings?populate=*',
+    }),
   }),
 });
 
-export const { useGetAboutQuery, useGetContactQuery } = api;
+export const { useGetAboutQuery, useGetContactQuery, useGetCateringQuery } = api;

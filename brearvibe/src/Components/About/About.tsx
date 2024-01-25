@@ -1,16 +1,18 @@
 import { api } from '../../Helper/Api/Api';
 import { useEffect } from 'react';
-import { IAbout } from '../../Helper/Interface/Interface';
+import { IComponent } from '../../Helper/Interface/Interface';
 import './About.scss';
 import Loader from '../Loader/Loader';
 
 function About() {
   const { isLoading, data, error } = api.useGetAboutQuery({});
-  const aboutData: IAbout = data;
+  const aboutData: IComponent = data;
 
   useEffect(() => {
     if (data) {
+      return;
     } else if (error) {
+      console.error('Error: ', error)
     }
   }, [data, error]);
 

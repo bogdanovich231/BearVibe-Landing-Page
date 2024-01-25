@@ -48,7 +48,7 @@ function Contact() {
           </ul>
         </div>
         <div className="contacts_button">
-          <Link to={'/'} className="button">
+          <Link to={'contact-forms'} className="button">
             Contact Us
           </Link>
         </div>

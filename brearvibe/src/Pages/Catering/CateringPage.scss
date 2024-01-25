@@ -1,0 +1,21 @@
+.catering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin: 50px 0px;
+
+    &_image {
+        img {
+            border-radius: 20px;
+        }
+    }
+
+    &_information {
+        max-width: 35%;
+
+        h2 {
+            margin-bottom: 12px;
+        }
+    }
+}

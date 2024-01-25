@@ -1,4 +1,4 @@
-export interface IAbout {
+export interface IComponent {
   data: [
     {
       id: number;

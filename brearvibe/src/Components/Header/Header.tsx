@@ -46,7 +46,7 @@ function Header() {
             </ScrollLink>
           </li>
           <li>
-            <Link to="/contact" onClick={closeMenu}>
+            <Link to="catering" onClick={closeMenu}>
               Catering
             </Link>
           </li>
