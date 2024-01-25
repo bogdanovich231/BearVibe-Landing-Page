@@ -1,5 +1,11 @@
+import CatalogProducts from "../../Components/CatalogProducts/CatalogProducts";
+
 function Menu() {
-  return <div>Menu</div>;
+  return (
+    <div>
+      <CatalogProducts />
+    </div>
+  );
 }
 
 export default Menu;
