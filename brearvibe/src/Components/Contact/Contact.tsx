@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { api } from "../../Helper/Api/Api";
 import { IContact } from "../../Helper/Interface/Interface";
 import Loader from "../Loader/Loader";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import mailSvg from '../../assets/mail.svg';
 import phoneSvg from '../../assets/phone.svg';
 import pinSvg from '../../assets/pin.svg';
@@ -22,7 +22,7 @@ function Contact() {
   }
 
   return (
-    <div className="contacts">
+    <div id="contact" className="contacts">
       <div className="contacts_image">
         <img src={aboutData.data[0].attributes.image.data[0].attributes.url} alt="" />
       </div>
@@ -46,6 +46,11 @@ function Contact() {
               <p>{aboutData.data[0].attributes.email}</p>
             </NavLink>
           </ul>
+        </div>
+        <div className="contacts_button">
+          <Link to={'/'} className="button">
+            Contact Us
+          </Link>
         </div>
       </div>
     </div>
