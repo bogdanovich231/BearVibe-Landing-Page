@@ -3,17 +3,25 @@ import Product from "../Product/Product";
 import { IProduct } from "../../Helper/Interface/Interface";
 import './Slider.scss';
 import { Link } from "react-router-dom";
+import { getAllproducts } from "../../Helper/Api/ApiProducts";
 
 function Slider() {
-  const [alldata, setalldata] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:1337/api/products?populate=*")
-      .then((response) => response.json())
-      .then(({ data }) => setalldata(data));
+    const fetchData = async () => {
+      try {
+        const data = await getAllproducts();
+        setAllProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
-  const sliderProducts = alldata.slice(0, 3)
+  const sliderProducts = allProducts.slice(0, 3)
 
   return (
 
