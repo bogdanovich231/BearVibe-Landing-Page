@@ -21,4 +21,9 @@ export const api = createApi({
   }),
 });
 
-export const { useGetAboutQuery, useGetContactQuery, useGetCateringQuery, useGetCoworkingQuery } = api;
+export const {
+  useGetAboutQuery,
+  useGetContactQuery,
+  useGetCateringQuery,
+  useGetCoworkingQuery
+} = api;

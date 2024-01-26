@@ -58,4 +58,9 @@ export interface IProduct {
   };
 }
 
-
+export interface ICategories {
+  id: number;
+  attributes: {
+    name: string;
+  }
+}

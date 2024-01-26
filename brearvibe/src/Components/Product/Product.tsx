@@ -11,11 +11,11 @@ function Product({ product }: ProductProps) {
     const {
         attributes: { name, price, description, image },
     } = product;
-    const imageUrl = image.data[0].attributes.url;
+    const imageUrl = image && image.data && image.data[0].attributes && image.data[0].attributes.url;
     return (
         <div className="product">
             <div className="product_image">
-                <img src={imageUrl} alt={name} />
+                {imageUrl && <img src={imageUrl} alt={name} />}
             </div>
             <div className="product_information">
                 <div className="product_title">

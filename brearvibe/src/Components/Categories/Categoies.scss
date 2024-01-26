@@ -1,0 +1,20 @@
+.categories {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    &_block {
+
+        border-radius: 20px;
+        background: #E923A4;
+        text-align: center;
+        color: #fff;
+
+        p {
+            padding: 10px 50px;
+        }
+    }
+}

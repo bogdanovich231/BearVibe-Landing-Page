@@ -14,8 +14,9 @@
 
     &_products {
         display: flex;
-        gap: 70px;
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 70px;
         margin: 50px 50px;
     }
 }
