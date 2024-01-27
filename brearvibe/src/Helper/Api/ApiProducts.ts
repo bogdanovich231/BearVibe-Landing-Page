@@ -1,6 +1,3 @@
-import Categories from "../../Components/Categories/Categories";
-import { IProduct } from "../Interface/Interface";
-
 export const getAllproducts = async (categories: string) => {
     try {
         const url = [`http://localhost:1337/api/products?populate=*`];

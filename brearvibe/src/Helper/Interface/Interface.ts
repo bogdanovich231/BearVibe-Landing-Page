@@ -64,3 +64,10 @@ export interface ICategories {
     name: string;
   }
 }
+
+export interface IFormInput {
+  name: string;
+  email: string;
+  topic: string;
+  message: string;
+}

@@ -44,4 +44,11 @@ a {
     padding: 8px 55px;
     color: #ffff;
     font-size: 20px;
+
+    &:hover {
+        background-color: #ffffff00;
+        color: #000;
+        border: 1px solid #E923A4;
+        transition: 1s ease;
+    }
 }
