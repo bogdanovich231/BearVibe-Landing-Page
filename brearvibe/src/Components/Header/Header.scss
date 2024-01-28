@@ -1,8 +1,16 @@
+.sticky {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    box-shadow: beige;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 50px;
+    padding: 20px 50px;
 }
 
 .menu {

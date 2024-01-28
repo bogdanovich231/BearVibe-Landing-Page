@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import './Header.scss';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,7 @@ import Logo from '../Logo/Logo';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scroll, setScroll] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -22,8 +23,24 @@ function Header() {
     enableBodyScroll(document.body);
   };
 
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    if (scrollTop > 100) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="header">
+    <div className={`header ${scroll ? 'sticky' : ''}`}>
       <Logo />
       <nav>
         <div data-testid="burger_btn" className={`header_burger-btn ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
