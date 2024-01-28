@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * menu controller
+ * categorie controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::menu.menu');
+module.exports = createCoreController('api::categorie.categorie');

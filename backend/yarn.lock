@@ -1096,6 +1096,29 @@
     colors "~1.2.1"
     string-argv "~0.3.1"
 
+"@sendgrid/client@^7.7.0":
+  version "7.7.0"
+  resolved "https://registry.npmjs.org/@sendgrid/client/-/client-7.7.0.tgz"
+  integrity sha512-SxH+y8jeAQSnDavrTD0uGDXYIIkFylCo+eDofVmZLQ0f862nnqbC3Vd1ej6b7Le7lboyzQF6F7Fodv02rYspuA==
+  dependencies:
+    "@sendgrid/helpers" "^7.7.0"
+    axios "^0.26.0"
+
+"@sendgrid/helpers@^7.7.0":
+  version "7.7.0"
+  resolved "https://registry.npmjs.org/@sendgrid/helpers/-/helpers-7.7.0.tgz"
+  integrity sha512-3AsAxfN3GDBcXoZ/y1mzAAbKzTtUZ5+ZrHOmWQ279AuaFXUNCh9bPnRpN504bgveTqoW+11IzPg3I0WVgDINpw==
+  dependencies:
+    deepmerge "^4.2.2"
+
+"@sendgrid/mail@7.7.0":
+  version "7.7.0"
+  resolved "https://registry.npmjs.org/@sendgrid/mail/-/mail-7.7.0.tgz"
+  integrity sha512-5+nApPE9wINBvHSUxwOxkkQqM/IAAaBYoP9hw7WwgDNQPxraruVqHizeTitVtKGiqWCKm2mnjh4XGN3fvFLqaw==
+  dependencies:
+    "@sendgrid/client" "^7.7.0"
+    "@sendgrid/helpers" "^7.7.0"
+
 "@sentry/core@6.19.7":
   version "6.19.7"
   resolved "https://registry.npmjs.org/@sentry/core/-/core-6.19.7.tgz"
@@ -1605,6 +1628,14 @@
   version "4.17.0"
   resolved "https://registry.npmjs.org/@strapi/provider-audit-logs-local/-/provider-audit-logs-local-4.17.0.tgz"
   integrity sha512-RwDz+Nrw9CSnHbuO94TQRQL3TV7sykCGw7alwV+FdwWUG2KFe7RL1aeFnnXa+8Uq+Eh6zkjcz4yJB1KgfW1/lQ==
+
+"@strapi/provider-email-sendgrid@^4.19.0":
+  version "4.19.0"
+  resolved "https://registry.npmjs.org/@strapi/provider-email-sendgrid/-/provider-email-sendgrid-4.19.0.tgz"
+  integrity sha512-RurG29O+FihMvdjdZSZBbUOJ90PoAXkuocQ4/oWqSKUytWvafG4gVTgn7xnWzjQygZeoU5pE5sW+44Vt75u81g==
+  dependencies:
+    "@sendgrid/mail" "7.7.0"
+    "@strapi/utils" "4.19.0"
 
 "@strapi/provider-email-sendmail@4.17.0":
   version "4.17.0"
@@ -2445,6 +2476,13 @@ atob@^2.1.2:
   version "2.1.2"
   resolved "https://registry.npmjs.org/atob/-/atob-2.1.2.tgz"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+
+axios@^0.26.0:
+  version "0.26.1"
+  resolved "https://registry.npmjs.org/axios/-/axios-0.26.1.tgz"
+  integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
+  dependencies:
+    follow-redirects "^1.14.8"
 
 axios@1.6.0:
   version "1.6.0"
@@ -4242,7 +4280,7 @@ fn.name@1.x.x:
   resolved "https://registry.npmjs.org/fn.name/-/fn.name-1.1.0.tgz"
   integrity sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==
 
-follow-redirects@^1.15.0, follow-redirects@^1.15.4:
+follow-redirects@^1.14.8, follow-redirects@^1.15.0, follow-redirects@^1.15.4:
   version "1.15.5"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.5.tgz"
   integrity sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==

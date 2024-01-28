@@ -801,6 +801,69 @@ export interface ApiAboutAbout extends Schema.CollectionType {
   };
 }
 
+export interface ApiCategorieCategorie extends Schema.CollectionType {
+  collectionName: 'categories';
+  info: {
+    singularName: 'categorie';
+    pluralName: 'categories';
+    displayName: 'Categorie';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::categorie.categorie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::categorie.categorie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCateringCatering extends Schema.CollectionType {
+  collectionName: 'caterings';
+  info: {
+    singularName: 'catering';
+    pluralName: 'caterings';
+    displayName: 'Catering';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media;
+    description: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::catering.catering',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::catering.catering',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiContactContact extends Schema.CollectionType {
   collectionName: 'contacts';
   info: {
@@ -835,26 +898,34 @@ export interface ApiContactContact extends Schema.CollectionType {
   };
 }
 
-export interface ApiMenuMenu extends Schema.CollectionType {
-  collectionName: 'menus';
+export interface ApiCoworkingCoworking extends Schema.CollectionType {
+  collectionName: 'coworkings';
   info: {
-    singularName: 'menu';
-    pluralName: 'menus';
-    displayName: 'menu';
-    description: '';
+    singularName: 'coworking';
+    pluralName: 'coworkings';
+    displayName: 'Coworking';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     title: Attribute.String;
-    description: Attribute.String;
+    image: Attribute.Media;
+    description: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::menu.menu', 'oneToOne', 'admin::user'> &
+    createdBy: Attribute.Relation<
+      'api::coworking.coworking',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
-    updatedBy: Attribute.Relation<'api::menu.menu', 'oneToOne', 'admin::user'> &
+    updatedBy: Attribute.Relation<
+      'api::coworking.coworking',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -915,8 +986,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
+      'api::categorie.categorie': ApiCategorieCategorie;
+      'api::catering.catering': ApiCateringCatering;
       'api::contact.contact': ApiContactContact;
-      'api::menu.menu': ApiMenuMenu;
+      'api::coworking.coworking': ApiCoworkingCoworking;
       'api::product.product': ApiProductProduct;
     }
   }

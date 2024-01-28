@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * menu service
+ * coworking service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::menu.menu');
+module.exports = createCoreService('api::coworking.coworking');
