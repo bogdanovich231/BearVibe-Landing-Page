@@ -36,9 +36,9 @@ function Header() {
             </Link>
           </li>
           <li>
-            <ScrollLink to="contact" onClick={closeMenu} smooth={true}>
+            <Link to="contact-forms" onClick={closeMenu}>
               Contact
-            </ScrollLink>
+            </Link>
           </li>
           <li>
             <ScrollLink to="about" smooth={true} onClick={closeMenu}>
