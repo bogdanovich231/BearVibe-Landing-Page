@@ -20,3 +20,11 @@
         margin: 50px 50px;
     }
 }
+
+@media screen and (max-width: 740px) {
+    .slider {
+        &_products {
+            gap: 14px;
+        }
+    }
+}

@@ -27,3 +27,24 @@
         }
     }
 }
+
+@media screen and (max-width: 870px) {
+    .coworking {
+        flex-direction: column;
+
+        &_image {
+            order: 2;
+            margin: 0px 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &_information {
+            order: 1;
+            max-width: 80%;
+            text-align: center;
+        }
+    }
+}

@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
+    margin-top: 50px;
 }
 
 .contact_information {
@@ -18,6 +19,7 @@
 .form_container {
     display: flex;
     justify-content: center;
+
 
     form {
         display: flex;
@@ -102,4 +104,38 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 1100px) {
+    .form_container {
+        form {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 924px) {
+    .contact_form {
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .contacts {
+            margin: 0px;
+        }
+    }
+
+    .form_container {
+        order: 2;
+        width: 90%;
+
+        form {
+            margin: 0px;
+        }
+    }
+
+    .contacts_information {
+        order: 1;
+    }
+
+
 }

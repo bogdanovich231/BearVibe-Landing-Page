@@ -46,3 +46,30 @@
         }
     }
 }
+
+@media screen and (max-width: 925px) {
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+
+        &_image {
+            order: 1;
+            margin: 0px 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &_information {
+            order: 2;
+
+            &_nav {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

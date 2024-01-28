@@ -28,3 +28,36 @@
         }
     }
 }
+
+@media screen and (max-width: 1100px) {
+    .about {
+        gap: 50px;
+
+        &_information {
+            max-width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+
+        &_image {
+            order: 2;
+            margin: 0px 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &_information {
+            order: 1;
+            max-width: 80%;
+        }
+    }
+}
