@@ -32,7 +32,7 @@ function CateringPage() {
                     <p>{cateringData.data[0].attributes.description}</p>
                 </div>
                 <div className="contacts_button">
-                    <Link to={'contact-forms'} className="button">
+                    <Link to={'/contact-forms'} className="button">
                         Contact Us
                     </Link>
                 </div>

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { IComponent } from '../../Helper/Interface/Interface';
 import './About.scss';
 import Loader from '../Loader/Loader';
+import { Helmet } from 'react-helmet';
 
 function About() {
   const { isLoading, data, error } = api.useGetAboutQuery({});
@@ -22,6 +23,10 @@ function About() {
 
   return (
     <div className="about">
+      <Helmet>
+        <title>BearVibe Café</title>
+        <meta name="description" content="Explore the world of NEGRAR Café  where quality Italian coffee meets remote work and co-working solutions. Discover our services, menu, and inviting atmosphere." />
+      </Helmet>
       <div className="about_image">
         <img src={aboutData.data[0].attributes.image.data[0].attributes.url} alt="" />
       </div>

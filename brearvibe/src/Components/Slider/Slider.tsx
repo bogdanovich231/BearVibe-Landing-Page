@@ -4,6 +4,7 @@ import { IProduct } from "../../Helper/Interface/Interface";
 import './Slider.scss';
 import { Link } from "react-router-dom";
 import { getAllproducts } from "../../Helper/Api/ApiProducts";
+import { Helmet } from "react-helmet";
 
 function Slider() {
   const [allProducts, setAllProducts] = useState([]);
@@ -26,6 +27,10 @@ function Slider() {
   return (
 
     <div className="slider">
+      <Helmet>
+        <title>BearVibe Café</title>
+        <meta name="description" content="BearVibe Café, Italian coffee, co-working, remote work, menu, services, atmosphere, quality coffee" />
+      </Helmet>
       <div className="slider_title">
         <h2>Indulge in Culinary Delights</h2>
         <p>Explore a Symphony of Flavors in Our Unparalleled Dessert Collection, Crafted to Elevate Your Gastronomic Experience.</p>
