@@ -1,6 +1,6 @@
 export const getAllproducts = async (categories: string) => {
     try {
-        const url = [`http://localhost:1337/api/products?populate=*`];
+        const url = [`https://strapi-app-7663.onrender.com/api/products?populate=*`];
 
         if (categories) {
             url.push(`&filters[categorie][$eq]=${categories}`);
@@ -21,7 +21,7 @@ export const getAllproducts = async (categories: string) => {
 
 export const getAllCategories = async () => {
     try {
-        const url = [`http://localhost:1337/api/categories`];
+        const url = [`https://strapi-app-7663.onrender.com/api/categories`];
         const response = await fetch(url.join(''), {
             method: 'GET',
         });
