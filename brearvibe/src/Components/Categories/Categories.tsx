@@ -3,7 +3,7 @@ import { ICategories } from '../../Helper/Interface/Interface';
 import './Categoies.scss';
 import { selectAllCategories, setCategories } from '../../store/slices/Categories.slice';
 import { getAllCategories } from '../../Helper/Api/ApiProducts';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface CategoriesProps {
   categories: ICategories[];
@@ -13,7 +13,11 @@ interface CategoriesProps {
 function Categories({ onCategoryClick }: CategoriesProps) {
   const dispatch = useDispatch();
   const categories = useSelector(selectAllCategories);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
+  const handleCategorieClick = () => {
+
+  }
   useEffect(() => {
     const fetchCategories = async () => {
       try {
@@ -28,13 +32,18 @@ function Categories({ onCategoryClick }: CategoriesProps) {
   }, [dispatch]);
 
   const handleCategoryClick = (category: string) => {
+    setActiveCategory(category);
     onCategoryClick(category);
   };
 
   return (
     <div className="categories">
       {categories.map((data) => (
-        <div className="categories_block" key={data.id} onClick={() => handleCategoryClick(data.attributes.name)}>
+        <div
+          className={`categories_block ${activeCategory === data.attributes.name ? 'active' : ''}`}
+          key={data.id}
+          onClick={() => handleCategoryClick(data.attributes.name)}
+        >
           <p>{data.attributes.name}</p>
         </div>
       ))}

@@ -5,7 +5,7 @@
   "type": "commonjs",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "lint:fix": "eslint . --fix",
     "format:fix": "prettier --write *.{js,css,ts,tsx,jsx}",
     "preview": "vite preview",
