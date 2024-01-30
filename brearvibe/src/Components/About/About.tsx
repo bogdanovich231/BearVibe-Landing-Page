@@ -13,7 +13,7 @@ function About() {
     if (data) {
       return;
     } else if (error) {
-      console.error('Error: ', error)
+      console.error('Error: ', error);
     }
   }, [data, error]);
 
@@ -25,7 +25,10 @@ function About() {
     <div className="about">
       <Helmet>
         <title>BearVibe Café</title>
-        <meta name="description" content="Explore the world of NEGRAR Café  where quality Italian coffee meets remote work and co-working solutions. Discover our services, menu, and inviting atmosphere." />
+        <meta
+          name="description"
+          content="Explore the world of NEGRAR Café  where quality Italian coffee meets remote work and co-working solutions. Discover our services, menu, and inviting atmosphere."
+        />
       </Helmet>
       <div className="about_image">
         <img src={aboutData.data[0].attributes.image.data[0].attributes.url} alt="" />
@@ -33,7 +36,7 @@ function About() {
       <div className="about_information">
         <h2>{aboutData.data[0].attributes.title}</h2>
         <div className="about_information_description">
-          <p className='about_information_description_break_word'>{aboutData.data[0].attributes.description}</p>
+          <p className="about_information_description_break_word">{aboutData.data[0].attributes.description}</p>
         </div>
       </div>
     </div>

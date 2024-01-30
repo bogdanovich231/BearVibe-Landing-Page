@@ -1,15 +1,15 @@
-import { useForm } from "react-hook-form";
-import { IFormInput } from "../../Helper/Interface/Interface";
-import Contact from "../../Components/Contact/Contact";
+import { useForm } from 'react-hook-form';
+import { IFormInput } from '../../Helper/Interface/Interface';
+import Contact from '../../Components/Contact/Contact';
 import './ContactPage.scss';
-import { yupResolver } from "@hookform/resolvers/yup";
-import { schema } from "../../Helper/Validation/Validation";
-import { db } from "../../Helper/Firebase/Firebase";
-import { collection, addDoc } from "firebase/firestore";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store/store";
-import { resetForm, setEmail, setLoader, setMessage, setName, setTopic } from "../../store/slices/Form.slice";
-import Loader from "../../Components/Loader/Loader";
+import { yupResolver } from '@hookform/resolvers/yup';
+import { schema } from '../../Helper/Validation/Validation';
+import { db } from '../../Helper/Firebase/Firebase';
+import { collection, addDoc } from 'firebase/firestore';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../store/store';
+import { resetForm, setEmail, setLoader, setMessage, setName, setTopic } from '../../store/slices/Form.slice';
+import Loader from '../../Components/Loader/Loader';
 
 function ContactPage() {
   const { name, email, topic, message, isLoading } = useSelector((state: RootState) => state.form);
@@ -18,7 +18,7 @@ function ContactPage() {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = useForm<IFormInput>({ resolver: yupResolver(schema) });
 
   const onSubmit = async () => {
@@ -78,7 +78,8 @@ function ContactPage() {
               placeholder="Message:"
               value={message}
               {...register('message')}
-              onChange={(e) => dispatch(setMessage(e.target.value))} />
+              onChange={(e) => dispatch(setMessage(e.target.value))}
+            />
           </div>
           {errors.message ? <p className="message_error">{errors.message.message}</p> : null}
           <div className="submit">

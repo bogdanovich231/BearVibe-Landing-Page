@@ -4,7 +4,7 @@ const API_URL = 'https://strapi-app-7663.onrender.com/api/';
 
 export const api = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: API_URL, }),
+  baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
   endpoints: (builder) => ({
     getAbout: builder.query({
       query: () => 'abouts?populate=*',
@@ -21,9 +21,4 @@ export const api = createApi({
   }),
 });
 
-export const {
-  useGetAboutQuery,
-  useGetContactQuery,
-  useGetCateringQuery,
-  useGetCoworkingQuery
-} = api;
+export const { useGetAboutQuery, useGetContactQuery, useGetCateringQuery, useGetCoworkingQuery } = api;

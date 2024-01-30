@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
-import CatalogProducts from "../../Components/CatalogProducts/CatalogProducts";
-import Categories from "../../Components/Categories/Categories";
-import { getAllCategories } from "../../Helper/Api/ApiProducts";
+import { useState } from 'react';
+import CatalogProducts from '../../Components/CatalogProducts/CatalogProducts';
+import Categories from '../../Components/Categories/Categories';
 
 function Menu() {
-  const [categories,] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [categories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   const handleCategoryClick = async (category: string) => {
     setSelectedCategory(category);

@@ -10,7 +10,7 @@ function Footer() {
         <NavLink to={'https://github.com/bogdanovich231'}>Tatsiana Kulinkovich</NavLink>
       </div>
       <Logo />
-    </div >
+    </div>
   );
 }
 

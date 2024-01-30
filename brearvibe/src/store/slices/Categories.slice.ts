@@ -2,26 +2,26 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 
 interface CategoriesState {
-    allCategories: string[];
-    selectedCategory: string;
+  allCategories: string[];
+  selectedCategory: string;
 }
 
 const initialState: CategoriesState = {
-    allCategories: [],
-    selectedCategory: '',
+  allCategories: [],
+  selectedCategory: '',
 };
 
 export const categoriesSlice = createSlice({
-    name: 'categories',
-    initialState,
-    reducers: {
-        setCategories: (state, action: PayloadAction<string[]>) => {
-            state.allCategories = action.payload;
-        },
-        setSelectedCategory: (state, action: PayloadAction<string>) => {
-            state.selectedCategory = action.payload;
-        },
+  name: 'categories',
+  initialState,
+  reducers: {
+    setCategories: (state, action: PayloadAction<string[]>) => {
+      state.allCategories = action.payload;
     },
+    setSelectedCategory: (state, action: PayloadAction<string>) => {
+      state.selectedCategory = action.payload;
+    },
+  },
 });
 
 export const { setCategories, setSelectedCategory } = categoriesSlice.actions;

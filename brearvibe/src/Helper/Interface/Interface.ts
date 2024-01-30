@@ -62,7 +62,7 @@ export interface ICategories {
   id: number;
   attributes: {
     name: string;
-  }
+  };
 }
 
 export interface IFormInput {

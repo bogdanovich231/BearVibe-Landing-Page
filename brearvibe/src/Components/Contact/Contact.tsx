@@ -1,12 +1,12 @@
-import { useEffect } from "react";
-import { api } from "../../Helper/Api/Api";
-import { IContact } from "../../Helper/Interface/Interface";
-import Loader from "../Loader/Loader";
-import { Link, NavLink } from "react-router-dom";
+import { useEffect } from 'react';
+import { api } from '../../Helper/Api/Api';
+import { IContact } from '../../Helper/Interface/Interface';
+import Loader from '../Loader/Loader';
+import { Link, NavLink } from 'react-router-dom';
 import mailSvg from '../../assets/mail.svg';
 import phoneSvg from '../../assets/phone.svg';
 import pinSvg from '../../assets/pin.svg';
-import './Contact.scss'
+import './Contact.scss';
 function Contact() {
   const { isLoading, data, error } = api.useGetContactQuery({});
   const aboutData: IContact = data;
@@ -29,7 +29,10 @@ function Contact() {
       <div className="contacts_information">
         <div className="contacts_information_title">
           <h2>Contact Us</h2>
-          <p>We look forward to welcoming you to BearVibe — <br />where style meets comfort!</p>
+          <p>
+            We look forward to welcoming you to BearVibe — <br />
+            where style meets comfort!
+          </p>
         </div>
         <div className="contacts_information_nav">
           <ul>

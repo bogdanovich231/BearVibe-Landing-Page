@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import './ErrorPage.scss';
 
 function ErrorPage() {
@@ -6,7 +6,7 @@ function ErrorPage() {
     <div className="notfound">
       <h1>Oops!</h1>
       <h2>404-not found page</h2>
-      <p>This page probably doesn't exist, go back to the home page.</p>
+      <p>This page probably doesn&apos;t exist, go back to the home page.</p>
       <div className="home_button">
         <Link to={'/'} className="button">
           Go to home
