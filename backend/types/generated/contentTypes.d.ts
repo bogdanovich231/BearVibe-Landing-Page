@@ -941,6 +941,42 @@ export interface ApiCoworkingCoworking extends Schema.CollectionType {
   };
 }
 
+export interface ApiProductProduct extends Schema.CollectionType {
+  collectionName: 'products';
+  info: {
+    singularName: 'product';
+    pluralName: 'products';
+    displayName: 'Product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    description: Attribute.String;
+    price: Attribute.Decimal;
+    image: Attribute.Media;
+    categorie: Attribute.Enumeration<
+      ['All', 'Bakery', 'Coffee', 'Pancakes', 'Sets']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -964,6 +1000,7 @@ declare module '@strapi/types' {
       'api::catering.catering': ApiCateringCatering;
       'api::contact.contact': ApiContactContact;
       'api::coworking.coworking': ApiCoworkingCoworking;
+      'api::product.product': ApiProductProduct;
     }
   }
 }
