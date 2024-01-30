@@ -909,6 +909,38 @@ export interface ApiContactContact extends Schema.CollectionType {
   };
 }
 
+export interface ApiCoworkingCoworking extends Schema.CollectionType {
+  collectionName: 'coworkings';
+  info: {
+    singularName: 'coworking';
+    pluralName: 'coworkings';
+    displayName: 'Coworking';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.RichText;
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::coworking.coworking',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::coworking.coworking',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -931,6 +963,7 @@ declare module '@strapi/types' {
       'api::categorie.categorie': ApiCategorieCategorie;
       'api::catering.catering': ApiCateringCatering;
       'api::contact.contact': ApiContactContact;
+      'api::coworking.coworking': ApiCoworkingCoworking;
     }
   }
 }
