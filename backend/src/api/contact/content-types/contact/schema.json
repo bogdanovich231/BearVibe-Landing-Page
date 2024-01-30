@@ -1,18 +1,17 @@
 {
   "kind": "collectionType",
-  "collectionName": "abouts",
+  "collectionName": "contacts",
   "info": {
-    "singularName": "about",
-    "pluralName": "abouts",
-    "displayName": "About",
-    "description": ""
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "address": {
       "type": "string"
     },
     "image": {
@@ -25,8 +24,11 @@
       "type": "media",
       "multiple": true
     },
-    "description": {
-      "type": "richtext"
+    "phone": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email"
     }
   }
 }

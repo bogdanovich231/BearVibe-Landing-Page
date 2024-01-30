@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "abouts",
+  "collectionName": "caterings",
   "info": {
-    "singularName": "about",
-    "pluralName": "abouts",
-    "displayName": "About",
-    "description": ""
+    "singularName": "catering",
+    "pluralName": "caterings",
+    "displayName": "Catering"
   },
   "options": {
     "draftAndPublish": true
