@@ -6,16 +6,17 @@
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096' strapi build",
+    "build": "strapi build",
     "strapi": "strapi"
   },
+  "devDependencies": {},
   "dependencies": {
     "@strapi/plugin-cloud": "4.19.0",
     "@strapi/plugin-i18n": "4.19.0",
     "@strapi/plugin-users-permissions": "4.19.0",
+    "@strapi/provider-upload-cloudinary": "^4.19.0",
     "@strapi/strapi": "4.19.0",
-    "better-sqlite3": "8.6.0",
-    "pg": "^8.11.3",
+    "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
@@ -25,7 +26,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "9302de5a-add4-42d2-900f-2097ceabe559"
+    "uuid": "28c1b4c6-ae6e-4a98-901e-272d709f4474"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
