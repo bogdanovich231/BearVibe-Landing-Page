@@ -13,6 +13,9 @@ The current application was developed as part of an educational project during a
  + Redux Toolkit
  + Firebase
  + Jest
+ + Vite
+ + ESLint
+ + Prettier
 
 ## Available scripts
 
