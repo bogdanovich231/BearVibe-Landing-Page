@@ -3,7 +3,7 @@
 
 ### Project Description
 
-The current application was developed as part of an educational project during a course at the University DSW. The main goal of the project was to acquire skills in developing full-fledged applications using technologies such as React, TypeScript, Strapi CMS, PostgreSQL, Redux Toolkit, as well as testing tools like Jest and Firebase. The application was designed for learning purposes and applying modern technologies in web development.
+The current application was developed as part of an educational project during a course at the University DSW. The main goal of the project was to acquire skills in developing full-fledged applications using technologies such as React, TypeScript, Strapi CMS, PostgreSQL, Redux Toolkit, as well as testing tool like Jest. The application was designed for learning purposes and applying modern technologies in web development.
 
 ### Technology Stack
 
