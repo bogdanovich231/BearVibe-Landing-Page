@@ -15,7 +15,7 @@ export const getAllproducts = async (categories: string) => {
     const { data } = await response.json();
     return data;
   } catch (error) {
-    console.error('Error in response products:', error);
+    console.log('Error in response products:', error);
     throw error;
   }
 };
@@ -30,7 +30,7 @@ export const getAllCategories = async () => {
     const { data } = await response.json();
     return data;
   } catch (error) {
-    console.error('Error in response categories:', error);
+    console.log('Error in response categories:', error);
     throw error;
   }
 };
