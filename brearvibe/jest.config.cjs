@@ -10,6 +10,8 @@ module.exports = {
         '<rootDir>/node_modules/',
         '<rootDir>/src/main\\.tsx$',
         '<rootDir>/src/vite-env.d\\.ts$',
+        '<rootDir>/src/Helper/ErrorBoundary/ErrorBoundary\.tsx$',
+        '<rootDir>/src/Helper/ErrorBoundary/ErrorMessage\.tsx$',
     ],
     transformIgnorePatterns: ['/node_modules/', '\\.pnp\\.[^\\/]+$'],
 };
