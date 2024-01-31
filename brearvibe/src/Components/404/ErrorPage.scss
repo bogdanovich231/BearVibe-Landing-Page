@@ -1,0 +1,19 @@
+.notfound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    h1 {
+        font-size: 17rem;
+        color: #E923A4;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    .home_button {
+        margin-top: 30px;
+    }
+}

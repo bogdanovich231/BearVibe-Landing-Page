@@ -1,0 +1,112 @@
+.welcome {
+    background-image: url('../../assets/bearbrick.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    &_block {
+        margin-right: 50px;
+        text-align: end;
+
+        p {
+            margin-bottom: 11px;
+        }
+    }
+
+    &_banner {
+        height: 800px;
+        width: 1200px;
+
+
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .welcome {
+        &_banner {
+            height: 700px;
+        }
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .welcome {
+        &_banner {
+            height: 500px;
+        }
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .welcome {
+        &_banner {
+            height: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 863px) {
+    .welcome {
+        &_banner {
+            height: 350px;
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    .welcome {
+        &_banner {
+            height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .welcome {
+        background-image: none;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+
+
+        &_banner {
+            display: none;
+
+        }
+
+        &_block {
+            text-align: center;
+            margin-right: 0px;
+            background-image: url('../../assets/background_home.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+
+            h1 {
+                margin-top: 15%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .welcome {
+        height: 470px;
+
+        &_block {
+            h1 {
+                font-size: 70px;
+                margin-top: 25%;
+            }
+        }
+    }
+}

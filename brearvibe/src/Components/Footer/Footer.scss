@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 50px;
+
+    a {
+        font-size: 20px;
+        color: #000;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+
+        &_author {
+            text-align: center;
+        }
+    }
+}

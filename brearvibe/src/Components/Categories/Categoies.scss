@@ -1,0 +1,37 @@
+.categories {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    &_block {
+
+        border-radius: 20px;
+        background: #E923A4;
+        text-align: center;
+        color: #fff;
+
+        p {
+            padding: 10px 50px;
+        }
+    }
+}
+
+.categories_block.active {
+    color: #E923A4;
+    background: #ff02a600;
+    border: 1px solid #E923A4;
+}
+
+@media screen and (max-width: 515px) {
+    .categories {
+        flex-direction: column;
+
+        &_block {
+            width: 60%;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inria Serif', serif;
+    margin: 0;
+}
+
+p {
+    font-size: 20px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+}
+
+h4 {
+    font-size: 20px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    margin: 0;
+}
+
+.button {
+    border-radius: 10px;
+    background: #E923A4;
+    border: none;
+    padding: 8px 55px;
+    color: #ffff;
+    font-size: 20px;
+
+    &:hover {
+        background-color: #ffffff00;
+        color: #000;
+        border: 1px solid #E923A4;
+        transition: 1s ease;
+    }
+}
