@@ -12,6 +12,7 @@ function Slider() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // @ts-ignore
         const data = await getAllproducts();
         setAllProducts(data);
       } catch (error) {

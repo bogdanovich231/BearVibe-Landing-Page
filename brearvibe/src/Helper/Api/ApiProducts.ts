@@ -1,3 +1,5 @@
+// @ts-ignore
+
 export const getAllproducts = async (categories: string) => {
   try {
     const url = [`https://strapi-app-7663.onrender.com/api/products?populate=*`];

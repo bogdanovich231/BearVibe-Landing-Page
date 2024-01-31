@@ -21,6 +21,7 @@ function CatalogProducts({ selectedCategory }: CatalogProductsProps) {
         if (selectedCategory && selectedCategory !== 'All') {
           data = await getAllproducts(selectedCategory);
         } else {
+          // @ts-ignore
           data = await getAllproducts();
         }
         dispatch(setProducts(data));

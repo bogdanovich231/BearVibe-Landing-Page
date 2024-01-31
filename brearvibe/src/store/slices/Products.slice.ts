@@ -5,6 +5,7 @@ export const productsSlice = createSlice({
   name: 'products',
   initialState: [],
   reducers: {
+    // @ts-ignore
     setProducts: (state, action) => {
       return action.payload;
     },

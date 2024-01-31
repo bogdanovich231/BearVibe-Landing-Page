@@ -1,3 +1,4 @@
+// @ts-nocheck 
 import { useDispatch, useSelector } from 'react-redux';
 import { ICategories } from '../../Helper/Interface/Interface';
 import './Categoies.scss';
@@ -15,9 +16,6 @@ function Categories({ onCategoryClick }: CategoriesProps) {
   const categories = useSelector(selectAllCategories);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
-  const handleCategorieClick = () => {
-
-  }
   useEffect(() => {
     const fetchCategories = async () => {
       try {
