@@ -5,12 +5,12 @@ import Welcome from '../../Components/Welcome/Welcome';
 
 function Home() {
   return (
-    <>
+    <div data-testid='home'>
       <Welcome />
       <About />
       <Slider />
       <Contact />
-    </>
+    </div>
   );
 }
 

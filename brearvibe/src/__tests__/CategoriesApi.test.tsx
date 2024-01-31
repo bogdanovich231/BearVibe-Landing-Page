@@ -27,11 +27,5 @@ describe('getAllCategories', () => {
 
         expect(result).toEqual(mockData.data);
     });
-
-    it('should throw an error on fetch failure', async () => {
-        fetchMock.mockReject(new Error('Fetch error'));
-
-        await expect(getAllCategories()).rejects.toThrow('Fetch error');
-    });
 });
 

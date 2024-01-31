@@ -4,7 +4,7 @@ import './Footer.scss';
 
 function Footer() {
   return (
-    <div className="footer">
+    <div data-testid='footer' className="footer">
       <div className="footer_author">
         <h3>Made:</h3>
         <NavLink to={'https://github.com/bogdanovich231'}>Tatsiana Kulinkovich</NavLink>

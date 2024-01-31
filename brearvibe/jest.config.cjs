@@ -6,6 +6,10 @@ module.exports = {
         '^.+\\.scss$': '<rootDir>/svgTransformer.js'
     },
     extensionsToTreatAsEsm: ['.jsx, .tsx'],
-
+    coveragePathIgnorePatterns: [
+        '<rootDir>/node_modules/',
+        '<rootDir>/src/main\\.tsx$',
+        '<rootDir>/src/vite-env.d\\.ts$',
+    ],
     transformIgnorePatterns: ['/node_modules/', '\\.pnp\\.[^\\/]+$'],
 };

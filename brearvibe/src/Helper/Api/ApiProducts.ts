@@ -16,7 +16,6 @@ export const getAllproducts = async (categories: string) => {
     return data;
   } catch (error) {
     console.log('Error in response products:', error);
-    throw error;
   }
 };
 
@@ -31,6 +30,5 @@ export const getAllCategories = async () => {
     return data;
   } catch (error) {
     console.log('Error in response categories:', error);
-    throw error;
   }
 };

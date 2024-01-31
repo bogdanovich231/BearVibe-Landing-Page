@@ -22,7 +22,7 @@ function Contact() {
   }
 
   return (
-    <div id="contact" className="contacts">
+    <div data-testid="contact" id="contact" className="contacts">
       <div className="contacts_image">
         <img src={aboutData.data[0].attributes.image.data[0].attributes.url} alt="" />
       </div>

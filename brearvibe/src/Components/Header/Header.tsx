@@ -40,7 +40,7 @@ function Header() {
   }, []);
 
   return (
-    <div className={`header ${scroll ? 'sticky' : ''}`}>
+    <div data-testid='header' className={`header ${scroll ? 'sticky' : ''}`}>
       <Logo />
       <nav>
         <div data-testid="burger_btn" className={`header_burger-btn ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
